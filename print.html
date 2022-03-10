@@ -1,0 +1,574 @@
+<!DOCTYPE HTML>
+<html lang="en" class="sidebar-visible no-js light">
+    <head>
+        <!-- Book generated using mdBook -->
+        <meta charset="UTF-8">
+        <title>CSNote</title>
+        <meta name="robots" content="noindex" />
+
+
+        <!-- Custom HTML head -->
+        
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="theme-color" content="#ffffff" />
+
+        <link rel="icon" href="favicon.svg">
+        <link rel="shortcut icon" href="favicon.png">
+        <link rel="stylesheet" href="css/variables.css">
+        <link rel="stylesheet" href="css/general.css">
+        <link rel="stylesheet" href="css/chrome.css">
+        <link rel="stylesheet" href="css/print.css" media="print">
+
+        <!-- Fonts -->
+        <link rel="stylesheet" href="FontAwesome/css/font-awesome.css">
+        <link rel="stylesheet" href="fonts/fonts.css">
+
+        <!-- Highlight.js Stylesheets -->
+        <link rel="stylesheet" href="highlight.css">
+        <link rel="stylesheet" href="tomorrow-night.css">
+        <link rel="stylesheet" href="ayu-highlight.css">
+
+        <!-- Custom theme stylesheets -->
+
+    </head>
+    <body>
+        <!-- Provide site root to javascript -->
+        <script type="text/javascript">
+            var path_to_root = "";
+            var default_theme = window.matchMedia("(prefers-color-scheme: dark)").matches ? "navy" : "light";
+        </script>
+
+        <!-- Work around some values being stored in localStorage wrapped in quotes -->
+        <script type="text/javascript">
+            try {
+                var theme = localStorage.getItem('mdbook-theme');
+                var sidebar = localStorage.getItem('mdbook-sidebar');
+
+                if (theme.startsWith('"') && theme.endsWith('"')) {
+                    localStorage.setItem('mdbook-theme', theme.slice(1, theme.length - 1));
+                }
+
+                if (sidebar.startsWith('"') && sidebar.endsWith('"')) {
+                    localStorage.setItem('mdbook-sidebar', sidebar.slice(1, sidebar.length - 1));
+                }
+            } catch (e) { }
+        </script>
+
+        <!-- Set the theme before any content is loaded, prevents flash -->
+        <script type="text/javascript">
+            var theme;
+            try { theme = localStorage.getItem('mdbook-theme'); } catch(e) { }
+            if (theme === null || theme === undefined) { theme = default_theme; }
+            var html = document.querySelector('html');
+            html.classList.remove('no-js')
+            html.classList.remove('light')
+            html.classList.add(theme);
+            html.classList.add('js');
+        </script>
+
+        <!-- Hide / unhide sidebar before it is displayed -->
+        <script type="text/javascript">
+            var html = document.querySelector('html');
+            var sidebar = 'hidden';
+            if (document.body.clientWidth >= 1080) {
+                try { sidebar = localStorage.getItem('mdbook-sidebar'); } catch(e) { }
+                sidebar = sidebar || 'visible';
+            }
+            html.classList.remove('sidebar-visible');
+            html.classList.add("sidebar-" + sidebar);
+        </script>
+
+        <nav id="sidebar" class="sidebar" aria-label="Table of contents">
+            <div class="sidebar-scrollbox">
+                <ol class="chapter"><li class="chapter-item expanded "><a href="cs61a/cs61a.html"><strong aria-hidden="true">1.</strong> cs61a</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="cs61a/1.2Functions.html"><strong aria-hidden="true">1.1.</strong> function</a></li><li class="chapter-item expanded "><a href="cs61a/2.3control.html"><strong aria-hidden="true">1.2.</strong> control</a></li><li class="chapter-item expanded "><a href="cs61a/2.4higherfuc.html"><strong aria-hidden="true">1.3.</strong> highfunc</a></li><li class="chapter-item expanded "><a href="cs61a/2.5environment.html"><strong aria-hidden="true">1.4.</strong> environment</a></li><li class="chapter-item expanded "><a href="cs61a/3.6design.html"><strong aria-hidden="true">1.5.</strong> design</a></li><li class="chapter-item expanded "><a href="cs61a/3.7funcexample.html"><strong aria-hidden="true">1.6.</strong> funcexample</a></li><li class="chapter-item expanded "><a href="cs61a/4.8recursion.html"><strong aria-hidden="true">1.7.</strong> recursion</a></li><li class="chapter-item expanded "><a href="cs61a/4.9recurseTree.html"><strong aria-hidden="true">1.8.</strong> recurseTree</a></li><li class="chapter-item expanded "><a href="cs61a/5.10containers.html"><strong aria-hidden="true">1.9.</strong> containers</a></li><li class="chapter-item expanded "><a href="cs61a/5.11dataAbstract.html"><strong aria-hidden="true">1.10.</strong> dataAbstract</a></li><li class="chapter-item expanded "><a href="cs61a/5.12trees.html"><strong aria-hidden="true">1.11.</strong> trees</a></li><li class="chapter-item expanded "><a href="cs61a/6.15mutableVal.html"><strong aria-hidden="true">1.12.</strong> mutableVal</a></li><li class="chapter-item expanded "><a href="cs61a/7.16mutableFunc.html"><strong aria-hidden="true">1.13.</strong> mutableFunc_void</a></li><li class="chapter-item expanded "><a href="cs61a/7.17iterators.html"><strong aria-hidden="true">1.14.</strong> iterators</a></li><li class="chapter-item expanded "><a href="cs61a/7.18objects.html"><strong aria-hidden="true">1.15.</strong> objects</a></li><li class="chapter-item expanded "><a href="cs61a/8.19inherience.html"><strong aria-hidden="true">1.16.</strong> inherience</a></li><li class="chapter-item expanded "><a href="cs61a/8.20representation.html"><strong aria-hidden="true">1.17.</strong> representation</a></li><li class="chapter-item expanded "><a href="cs61a/8.21compostion.html"><strong aria-hidden="true">1.18.</strong> compostion</a></li><li class="chapter-item expanded "><a href="cs61a/9.24efficency.html"><strong aria-hidden="true">1.19.</strong> efficiency</a></li><li class="chapter-item expanded "><a href="cs61a/9.23decomposition.html"><strong aria-hidden="true">1.20.</strong> decomposition</a></li><li class="chapter-item expanded "><a href="cs61a/11.27scheme.html"><strong aria-hidden="true">1.21.</strong> scheme</a></li><li class="chapter-item expanded "><a href="cs61a/11.28exception.html"><strong aria-hidden="true">1.22.</strong> exception</a></li><li class="chapter-item expanded "><a href="cs61a/12.30Interpreter.html"><strong aria-hidden="true">1.23.</strong> interpreter</a></li><li class="chapter-item expanded "><a href="cs61a/14.35TailCall.html"><strong aria-hidden="true">1.24.</strong> tailcall_void</a></li><li class="chapter-item expanded "><a href="cs61a/final.html"><strong aria-hidden="true">1.25.</strong> Final</a></li></ol></li><li class="chapter-item expanded "><a href="cs61b/cs61b.html"><strong aria-hidden="true">2.</strong> cs61b</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="cs61b/1.2classdef.html"><strong aria-hidden="true">2.1.</strong> class def &amp; use</a></li><li class="chapter-item expanded "><a href="cs61b/2.2sslist.html"><strong aria-hidden="true">2.2.</strong> 2.2sslit</a></li></ol></li></ol>
+            </div>
+            <div id="sidebar-resize-handle" class="sidebar-resize-handle"></div>
+        </nav>
+
+        <div id="page-wrapper" class="page-wrapper">
+
+            <div class="page">
+                                <div id="menu-bar-hover-placeholder"></div>
+                <div id="menu-bar" class="menu-bar sticky bordered">
+                    <div class="left-buttons">
+                        <button id="sidebar-toggle" class="icon-button" type="button" title="Toggle Table of Contents" aria-label="Toggle Table of Contents" aria-controls="sidebar">
+                            <i class="fa fa-bars"></i>
+                        </button>
+                        <button id="theme-toggle" class="icon-button" type="button" title="Change theme" aria-label="Change theme" aria-haspopup="true" aria-expanded="false" aria-controls="theme-list">
+                            <i class="fa fa-paint-brush"></i>
+                        </button>
+                        <ul id="theme-list" class="theme-popup" aria-label="Themes" role="menu">
+                            <li role="none"><button role="menuitem" class="theme" id="light">Light (default)</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="rust">Rust</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="coal">Coal</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="navy">Navy</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="ayu">Ayu</button></li>
+                        </ul>
+                        <button id="search-toggle" class="icon-button" type="button" title="Search. (Shortkey: s)" aria-label="Toggle Searchbar" aria-expanded="false" aria-keyshortcuts="S" aria-controls="searchbar">
+                            <i class="fa fa-search"></i>
+                        </button>
+                    </div>
+
+                    <h1 class="menu-title">CSNote</h1>
+
+                    <div class="right-buttons">
+                        <a href="print.html" title="Print this book" aria-label="Print this book">
+                            <i id="print-button" class="fa fa-print"></i>
+                        </a>
+
+                    </div>
+                </div>
+
+                <div id="search-wrapper" class="hidden">
+                    <form id="searchbar-outer" class="searchbar-outer">
+                        <input type="search" id="searchbar" name="searchbar" placeholder="Search this book ..." aria-controls="searchresults-outer" aria-describedby="searchresults-header">
+                    </form>
+                    <div id="searchresults-outer" class="searchresults-outer hidden">
+                        <div id="searchresults-header" class="searchresults-header"></div>
+                        <ul id="searchresults">
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Apply ARIA attributes after the sidebar and the sidebar toggle button are added to the DOM -->
+                <script type="text/javascript">
+                    document.getElementById('sidebar-toggle').setAttribute('aria-expanded', sidebar === 'visible');
+                    document.getElementById('sidebar').setAttribute('aria-hidden', sidebar !== 'visible');
+                    Array.from(document.querySelectorAll('#sidebar a')).forEach(function(link) {
+                        link.setAttribute('tabIndex', sidebar === 'visible' ? 0 : -1);
+                    });
+                </script>
+
+                <div id="content" class="content">
+                    <main>
+                        <blockquote>
+<p>cs61a笔记</p>
+</blockquote>
+<div style="break-before: page; page-break-before: always;"></div><p><img src="https://s2.loli.net/2021/12/31/X81iKNunaCIPJMD.jpg" alt="X81iKNunaCIPJMD" /></p>
+<div style="break-before: page; page-break-before: always;"></div><ul>
+<li>None -&gt; print().输出是print这种no pure函数的side effect</li>
+<li>一个函数调用另一个函数，形成了不同local frame。每个local frame有每一层的执行的namescape。互相没有联系。global frame是local frame的关系。</li>
+<li>函数调用时，参数传入会在local frame</li>
+</ul>
+<div style="break-before: page; page-break-before: always;"></div><ul>
+<li>assert,判断输入是否合理</li>
+<li>当function的return是另一个fuction时。
+传多个参数，首先是外层函数，其次传给return function的函数。传参数-&gt;return function-&gt;传参数
+<img src="https://s2.loli.net/2022/01/02/FOmDp5R3hvagUcr.jpg" alt="FOmDp5R3hvagUcr" />
+两次调用函数，就是两层local frame</li>
+<li>why higher order fuction?
+<img src="https://s2.loli.net/2022/01/02/OhGBvPZ8YyxCa9r.jpg" alt="OhGBvPZ8YyxCa9r" />
+<ol>
+<li>抽象共同特征</li>
+<li>减少关系连接</li>
+</ol>
+</li>
+<li>lambda没有statement，也没有name。</li>
+<li><img src="https://s2.loli.net/2022/01/02/AHbsPWT2N3G8aLc.jpg" alt="AHbsPWT2N3G8aLc" />
+01 if gay else straight</li>
+<li>return lambda嵌套函数，调用图
+<img src="https://s2.loli.net/2022/01/02/SlLNxXVYT9cHq1F.jpg" alt="SlLNxXVYT9cHq1F" /></li>
+<li>disc
+<img src="https://s2.loli.net/2022/01/02/DJZvq43VaiL7KQ9.jpg" alt="DJZvq43VaiL7KQ9" /></li>
+</ul>
+<div style="break-before: page; page-break-before: always;"></div><ul>
+<li>Local Names are not visable to other funcs.
+A调用B, A和B的参数是互不交集的。
+A嵌套B，A是B的parent frame，A的参数对B是visable</li>
+<li>lambda区别于function：没name</li>
+<li><img src="https://s2.loli.net/2022/01/04/3bl5AEYFGIvip4u.jpg" alt="3bl5AEYFGIvip4u" />
+(lambda:3)() 
+3</li>
+<li><img src="https://s2.loli.net/2022/01/05/racOfFoHmqJVlWn.jpg" alt="racOfFoHmqJVlWn" />
+调用函数时候才会形成local frame。local frame先在本层找，没有再去global frame找。</li>
+<li><img src="https://s2.loli.net/2022/01/05/68nGVOS2qEkTAgB.jpg" alt="68nGVOS2qEkTAgB" />
+self reference
+返回自身，递归调用?</li>
+<li>调用函数前，把所有参数evaluate完。</li>
+</ul>
+<div style="break-before: page; page-break-before: always;"></div><p><img src="https://s2.loli.net/2022/01/05/mFgDUEybdRKwxXY.jpg" alt="mFgDUEybdRKwxXY" /></p>
+<div style="break-before: page; page-break-before: always;"></div><ul>
+<li>decocrators
+trace functions.可以自定义显示的trace内容.
+<img src="https://s2.loli.net/2022/01/08/tdBuWHmy1j7gqfI.jpg" alt="tdBuWHmy1j7gqfI" /></li>
+<li></li>
+</ul>
+<div style="break-before: page; page-break-before: always;"></div><ul>
+<li>mututal recursion
+<img src="https://s2.loli.net/2022/01/09/7SgM2cYEPhjzbmd.jpg" alt="7SgM2cYEPhjzbmd" /></li>
+<li>if else,在无return的if中，else最好不要省略</li>
+</ul>
+<div style="break-before: page; page-break-before: always;"></div><ul>
+<li>iteration -&gt; recursion<br />
+把每次iterate重复的部分抽象封装。
+<img src="https://s2.loli.net/2022/01/10/Eo4sVAUl9gfJhyF.jpg" alt="Eo4sVAUl9gfJhyF" />
+自顶向下展开函数后 自底向上return</li>
+<li><img src="https://s2.loli.net/2022/01/10/rgQtVFw6fbNm5y1.jpg" alt="rgQtVFw6fbNm5y1" />
+call 直到return才结束</li>
+<li>no return - &gt; none</li>
+<li><img src="https://s2.loli.net/2022/01/11/eSmkKtnDhV24CH3.jpg" alt="eSmkKtnDhV24CH3" />
+trace 代替print</li>
+<li><a href="https://www.youtube.com/watch?v=AJUepmTxF9o">tree recursion video in 2018</a></li>
+</ul>
+<div style="break-before: page; page-break-before: always;"></div><ul>
+<li>
+<p>change iteration to simpler by 'in' 
+<img src="https://s2.loli.net/2022/01/12/p5OoueQAPWVTYyv.jpg" alt="p5OoueQAPWVTYyv" />
+<img src="https://s2.loli.net/2022/01/12/68N3KwPrH2MJhFb.jpg" alt="68N3KwPrH2MJhFb" />
+expression是可循环value,etc list. 顺序: 将每次循环的value绑定到name，然后再执行下面的suite
+<img src="https://s2.loli.net/2022/01/12/SUHi6MsNbBQj4p9.jpg" alt="SUHi6MsNbBQj4p9" /></p>
+</li>
+<li>
+<p>Range(代替计数器(index))
+<img src="https://s2.loli.net/2022/01/12/NvG86YrkwOcIShL.jpg" alt="NvG86YrkwOcIShL" /></p>
+<ul>
+<li>length: end - start</li>
+<li>范围: 包含start，不包含end</li>
+<li>只有一个参数时，第一个参数为0
+<ul>
+<li>[1:] 参数+: --&gt; 最后一个参数到end</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>
+<p><img src="https://s2.loli.net/2022/01/12/89bqsKukRL63NI5.jpg" alt="89bqsKukRL63NI5" /></p>
+<ul>
+<li>用递归compute，展开计算，递归返回底层结果。</li>
+</ul>
+</li>
+<li>
+<p>reverse</p>
+<ul>
+<li><img src="https://s2.loli.net/2022/01/12/qv8pCOoiMWzQ9x3.jpg" alt="qv8pCOoiMWzQ9x3" /></li>
+<li><img src="https://s2.loli.net/2022/01/12/Br8kSegXGWq9Qfd.jpg" alt="Br8kSegXGWq9Qfd" /></li>
+<li>抽象出共同特点作为扩展的case</li>
+</ul>
+</li>
+<li>
+<p>recurse 从小到大递归，先找到base case(最大值),再递归到更小的case
+<img src="https://s2.loli.net/2022/01/12/cH6uvARdM7YeSVN.jpg" alt="cH6uvARdM7YeSVN" /></p>
+<ul>
+<li>将返回结果作为函数的参数
+<img src="https://s2.loli.net/2022/01/12/HlMtzK7PU49EeDL.jpg" alt="HlMtzK7PU49EeDL" />
+<img src="https://s2.loli.net/2022/01/12/nZ3Fc985SgwifBR.jpg" alt="nZ3Fc985SgwifBR" /></li>
+<li>recurse --&gt; iteration:
+<img src="https://s2.loli.net/2022/01/12/EWZ7kDV1eMu9H6z.jpg" alt="EWZ7kDV1eMu9H6z" /></li>
+</ul>
+</li>
+<li>
+<p>help function在外面能调用，里面省去了重复的参数。</p>
+</li>
+<li>
+<p>sequence aggregation</p>
+<ul>
+<li><img src="https://s2.loli.net/2022/01/12/msK3EWcoyTXt4Mv.jpg" alt="msK3EWcoyTXt4Mv" /></li>
+</ul>
+</li>
+</ul>
+<div style="break-before: page; page-break-before: always;"></div><ul>
+<li><img src="https://s2.loli.net/2022/01/13/ckyCLbDAGzZYJpV.jpg" alt="ckyCLbDAGzZYJpV" />
+constructor -&gt; define 某种对象
+selector -&gt; 选择数据结构中的value</li>
+<li><img src="https://s2.loli.net/2022/01/13/nuPfWhXR23GHO1z.jpg" alt="nuPfWhXR23GHO1z" />
+constructor and selector</li>
+<li>用数据结构存储需要的值，selector来选取值，用定义的计算方式来计算。
+第一层抽象 		第二层		第三层:w</li>
+<li><img src="https://s2.loli.net/2022/01/17/2XDpxa7oNPBiEMb.jpg" alt="2XDpxa7oNPBiEMb" /></li>
+</ul>
+<div style="break-before: page; page-break-before: always;"></div><ul>
+<li><img src="https://s2.loli.net/2022/01/14/irvdTlNgsfWecXj.jpg" alt="irvdTlNgsfWecXj" /></li>
+<li>slice 是用range取指定范围内映射的简化</li>
+<li><img src="https://s2.loli.net/2022/01/14/WrXjlvbVRJyOpx7.jpg" alt="WrXjlvbVRJyOpx7" /></li>
+<li>在某范围内，找映射函数的最大值</li>
+<li>iterable类 基础computation</li>
+<li><img src="https://s2.loli.net/2022/01/14/BZhYAl83wpK2omx.jpg" alt="BZhYAl83wpK2omx" />
+sequence aggregation(内置在iterable 数据结构里的函数</li>
+<li><img src="https://s2.loli.net/2022/01/14/EhL8a5iI4k2Kb6f.jpg" alt="EhL8a5iI4k2Kb6f" />
+tree: label brach, tree --&gt; list</li>
+<li><img src="https://s2.loli.net/2022/01/14/lQiWxE42vqTnG8I.jpg" alt="lQiWxE42vqTnG8I" />
+<ul>
+<li>use tree to do recursion, need to sum all branches </li>
+<li>遍历tree上所有的分支 求和</li>
+</ul>
+</li>
+<li><img src="https://s2.loli.net/2022/01/14/6C2XAa75IpgSTkD.jpg" alt="6C2XAa75IpgSTkD" />
+<ul>
+<li>用tree来做递归，与过去递归差别在：它是普通递归的封装，普通递归只是调用本身函数，tree的base case一般是leaf，recursion是遍历branch,value是label。</li>
+</ul>
+</li>
+<li><img src="https://s2.loli.net/2022/01/14/PlLnYUrixmsf3WD.jpg" alt="PlLnYUrixmsf3WD" />
+<ul>
+<li>tail recursion</li>
+<li>n是一个计数器，k是个result的过程值。(如何写递归多参数)</li>
+</ul>
+</li>
+</ul>
+<hr />
+<ol>
+<li>tree - constructor.tree 由label和branches组成。tree是constructor，label和braches是selector。</li>
+<li>fib tree --&gt; tree recursion(分开相加，有选择) 也是tree，在tree本身结构上递归。</li>
+<li><img src="https://s2.loli.net/2022/01/17/eUHpNDfdlr5jihw.jpg" alt="count_nodes" />
+遍历所有brach，总和。</li>
+<li><img src="https://s2.loli.net/2022/01/17/A4n7FNobgfVzQXd.jpg" alt="A4n7FNobgfVzQXd" />
+关于tree最好的图解！！！</li>
+<li></li>
+</ol>
+<div style="break-before: page; page-break-before: always;"></div><ol>
+<li><img src="https://s2.loli.net/2022/01/18/I5lHQKCgftex4dP.jpg" alt="I5lHQKCgftex4dP" /></li>
+<li>ASCII --&gt; 英语
+Unicode --&gt; all languages</li>
+<li>pop remove类似切片的黑盒化
+<ol>
+<li><img src="https://s2.loli.net/2022/01/18/qNhDXzewbMWt5kC.png" alt="image.png" /></li>
+</ol>
+</li>
+<li><img src="https://s2.loli.net/2022/01/18/862uNn7JUTViIEM.jpg" alt="862uNn7JUTViIEM" /></li>
+<li><img src="https://s2.loli.net/2022/01/18/GsB8xoH3JONrpKz.png" alt="list" />
+<blockquote>
+<p>pop return 最后一个value</p>
+</blockquote>
+</li>
+<li><img src="https://s2.loli.net/2022/01/18/mrbUix3LQBIfw7E.jpg" alt="mrbUix3LQBIfw7E" />
+<ol>
+<li>
+<blockquote>
+<p>list in list, 之间的应用关系借助一个空list[]</p>
+</blockquote>
+</li>
+</ol>
+</li>
+<li>只有slice类选中赋值可以插入list，否则只是value。插入list是put value，而不是container
+s[0:0] --&gt; insert
+s[0:1] --&gt; replace and insert</li>
+<li>tuple,进行操作后不会改变本身。list相反。</li>
+</ol>
+<div style="break-before: page; page-break-before: always;"></div><div style="break-before: page; page-break-before: always;"></div><ul>
+<li>Iterators
+<ul>
+<li>iter --&gt; return 一个 iterator</li>
+<li>next --&gt; 返回下一个</li>
+</ul>
+</li>
+<li><img src="https://s2.loli.net/2022/01/21/ANcvZKMl4e8uY7o.jpg" alt="ANcvZKMl4e8uY7o" /></li>
+<li><img src="https://s2.loli.net/2022/01/21/tCP3iFJGOYAbnEx.jpg" alt="tCP3iFJGOYAbnEx" />
+<ul>
+<li>yield用在某些return后还继续操作的情况下</li>
+</ul>
+</li>
+<li><img src="https://s2.loli.net/2022/01/21/HQi5Kmj6GlSkyC4.jpg" alt="HQi5Kmj6GlSkyC4" />
+<ul>
+<li>result[1]
+<ul>
+<li>list --&gt; generator</li>
+</ul>
+</li>
+</ul>
+</li>
+<li></li>
+</ul>
+<div style="break-before: page; page-break-before: always;"></div><ul>
+<li>当创建一个instance时发生的，self绑定到创建的instance上，传入的参数绑定到__init__的参数上.
+<img src="https://s2.loli.net/2022/01/25/4jic7N6UwPYCzgS.jpg" alt="4jic7N6UwPYCzgS" /></li>
+<li>
+<ol>
+<li>getattr(instance_name, 'attrname') </li>
+</ol>
+</li>
+<li>
+<ol start="2">
+<li>hasattr(instance_name, 'attrname')</li>
+</ol>
+</li>
+<li></li>
+</ul>
+<div style="break-before: page; page-break-before: always;"></div><ol>
+<li>inherience不是copy attribute，而是向上访问base类的attribute
+<ol>
+<li>how to look up attribute
+<ol>
+<li>this class</li>
+<li>base class</li>
+</ol>
+</li>
+</ol>
+</li>
+<li>inherience - 
+<ol>
+<li>使用已有的方法。进而扩展</li>
+<li>复写</li>
+</ol>
+</li>
+<li>multiple  inherience 
+<ol>
+<li>可以有多个父类</li>
+</ol>
+</li>
+</ol>
+<div style="break-before: page; page-break-before: always;"></div><ul>
+<li>repr nad <strong>repr</strong>
+<ul>
+<li><strong>repr</strong> --&gt; class attribute</li>
+<li></li>
+</ul>
+</li>
+</ul>
+<div style="break-before: page; page-break-before: always;"></div><ul>
+<li><img src="https://s2.loli.net/2022/01/29/nySrUaoT6KWmbhN.jpg" alt="nySrUaoT6KWmbhN" />
+<ul>
+<li>link list -&gt; add new link/chage first and add new empty list</li>
+</ul>
+</li>
+<li><img src="https://s2.loli.net/2022/01/29/1l3WTcpxqNkRgaJ.jpg" alt="1l3WTcpxqNkRgaJ" />
+<ul>
+<li>recusre in link list</li>
+</ul>
+</li>
+</ul>
+<div style="break-before: page; page-break-before: always;"></div><ul>
+<li><img src="https://s2.loli.net/2022/01/31/zSoReP2XpVG4EHU.jpg" alt="zSoReP2XpVG4EHU" /></li>
+<li></li>
+</ul>
+<div style="break-before: page; page-break-before: always;"></div><ul>
+<li>写很多题要看construct </li>
+</ul>
+<div style="break-before: page; page-break-before: always;"></div><ul>
+<li><img src="https://s2.loli.net/2022/02/03/ryLnGkWR2bHMemx.jpg" alt="ryLnGkWR2bHMemx" />
+<ul>
+<li>scheme - fractal</li>
+</ul>
+</li>
+<li><img src="https://s2.loli.net/2022/02/04/6OkX4hDi7Ljln5Z.jpg" alt="6OkX4hDi7Ljln5Z" />
+<ul>
+<li>built in and user defined procedure</li>
+</ul>
+</li>
+<li></li>
+</ul>
+<div style="break-before: page; page-break-before: always;"></div><ul>
+<li><img src="https://s2.loli.net/2022/02/04/dX5MBDgkyqSOwNe.jpg" alt="dX5MBDgkyqSOwNe" />
+<ul>
+<li>try exception</li>
+</ul>
+</li>
+</ul>
+<div style="break-before: page; page-break-before: always;"></div><ul>
+<li>
+<p>REPL --&gt; Read-Eval-Print-Loop</p>
+<ul>
+<li>Read --&gt; Turns input into a useful data structure</li>
+<li>Literal(1)</li>
+<li>Name('x')</li>
+</ul>
+</li>
+<li>
+<p>the types of expressions in PyCombinator --&gt; literal, name, call expression, lambda expression</p>
+</li>
+<li>
+<p>the types of values in PyCombinator --&gt; number, lambda function, primitive function</p>
+</li>
+<li>
+<p>A lambda function is the result of evaluating a lambda expression</p>
+</li>
+<li>
+<p><img src="https://s2.loli.net/2022/02/14/DUg1E6Iw9b3dkcq.png" alt="DUg1E6Iw9b3dkcq" /></p>
+</li>
+<li>
+<p><img src="https://s2.loli.net/2022/02/14/QXM3aJdgKkIF6Pz.png" alt="QXM3aJdgKkIF6Pz" /></p>
+</li>
+<li>
+<p><img src="https://s2.loli.net/2022/02/14/SbITgO3dDkWiEX7.png" alt="SbITgO3dDkWiEX7" /></p>
+</li>
+<li>
+<p><img src="https://s2.loli.net/2022/02/14/PCjV68gomZ9qveH.png" alt="PCjV68gomZ9qveH" /></p>
+</li>
+</ul>
+<div style="break-before: page; page-break-before: always;"></div><div style="break-before: page; page-break-before: always;"></div><h1 id="chapter-1"><a class="header" href="#chapter-1">Chapter 1</a></h1>
+<p><img src="https://cdn.jsdelivr.net/gh/h3x311/upic@main/uPic/2022/SFWJKI_e0cyO9.jpg" alt="SFWJKI_e0cyO9" />
+<img src="https://cdn.jsdelivr.net/gh/h3x311/upic@main/uPic/2022/JF1Twz_4fkX2C.png" alt="JF1Twz_4fkX2C" /></p>
+<div style="break-before: page; page-break-before: always;"></div><div style="break-before: page; page-break-before: always;"></div><h2 id="1st"><a class="header" href="#1st">1st</a></h2>
+<ol>
+<li>变量类型必须有，且不可改变，在运行前verify
+<ol>
+<li><img src="https://cdn.jsdelivr.net/gh/h3x311/upic@main/uPic/2022/Qz65SR_4Z5cVh.png" alt="Qz65SR_4Z5cVh" /></li>
+</ol>
+</li>
+<li>A func is called a method
+<ol>
+<li>define func --&gt; public staic</li>
+<li>func's parameters and return value must declared type</li>
+<li>Only one return val</li>
+</ol>
+</li>
+</ol>
+<h2 id="2nd"><a class="header" href="#2nd">2nd</a></h2>
+<ol>
+<li>没有main的method可以在有main的method里被调用
+<ol>
+<li><img src="https://cdn.jsdelivr.net/gh/h3x311/upic@main/uPic/2022/3bwDza_fRYy3a.png" alt="3bwDza_fRYy3a" /></li>
+</ol>
+</li>
+</ol>
+<div style="break-before: page; page-break-before: always;"></div><ol>
+<li><img src="https://cdn.jsdelivr.net/gh/h3x311/upic@main/uPic/2022/1VoyFN_PEPWn9.jpg" alt="1VoyFN_PEPWn9" /></li>
+</ol>
+
+                    </main>
+
+                    <nav class="nav-wrapper" aria-label="Page navigation">
+                        <!-- Mobile navigation buttons -->
+
+
+                        <div style="clear: both"></div>
+                    </nav>
+                </div>
+            </div>
+
+            <nav class="nav-wide-wrapper" aria-label="Page navigation">
+
+            </nav>
+
+        </div>
+
+        <!-- Livereload script (if served using the cli tool) -->
+        <script type="text/javascript">
+            var socket = new WebSocket("ws://localhost:3000/__livereload");
+            socket.onmessage = function (event) {
+                if (event.data === "reload") {
+                    socket.close();
+                    location.reload();
+                }
+            };
+
+            window.onbeforeunload = function() {
+                socket.close();
+            }
+        </script>
+
+
+
+        <script type="text/javascript">
+            window.playground_copyable = true;
+        </script>
+
+
+        <script src="elasticlunr.min.js" type="text/javascript" charset="utf-8"></script>
+        <script src="mark.min.js" type="text/javascript" charset="utf-8"></script>
+        <script src="searcher.js" type="text/javascript" charset="utf-8"></script>
+
+        <script src="clipboard.min.js" type="text/javascript" charset="utf-8"></script>
+        <script src="highlight.js" type="text/javascript" charset="utf-8"></script>
+        <script src="book.js" type="text/javascript" charset="utf-8"></script>
+
+        <!-- Custom JS scripts -->
+
+        <script type="text/javascript">
+        window.addEventListener('load', function() {
+            window.setTimeout(window.print, 100);
+        });
+        </script>
+
+    </body>
+</html>
